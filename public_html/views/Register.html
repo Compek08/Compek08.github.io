@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Register MELSA</title>
+        <script src="../assets/js/jquery.min.js"></script>
+        <script>
+            $(function () {
+                $("head").load("template/Header.html");
+            });
+        </script>
+    </head>
+
+    <body>
+        <div>
+            <div class="col-12 col-s-12" id="menu"></div>
+            <div class="content">
+                <div class="col-12 col-s-12">
+                    <div class="form">
+                        <form name="register" action="Login.html">
+                            <h2 class="t-center">Register MELSA</h2>
+                            <table class="col-12">
+                                <tr>
+                                    <td>Nama</td>
+                                    <td><input type="text" name="nama" placeholder="Masukkan Nama"  oninput="this.value=this.value.replace(/[^a-zA-Z' ]/g,'')" autofocus required></td>
+                                </tr>
+
+                                <tr>
+                                    <td>NIS</td>
+                                    <td><input type="text" name="nis" placeholder="Masukkan NIS" oninput="this.value=this.value.replace(/[^0-9]/g,'')" maxlength="8" required></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Alamat</td>
+                                    <td><textarea style="resize: none" name="alamat" rows="3" placeholder="Masukkan Alamat" required></textarea></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Email</td>
+                                    <td><input type="email" name="email" placeholder="Masukkan Email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Password</td>
+                                    <td><input type="password" name="password" placeholder="Masukkan Password" required></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Jenis Kelamin</td>
+                                    <td>
+                                        <label><input style="width: 20px; height: 15px" type="radio" name="gender" value="Laki-laki" required >Laki-laki</label>
+                                        <label><input style="width: 20px; height: 15px" type="radio" name="gender" value="Perempuan" required >Perempuan</label>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td></td>
+                                    <td><input type="submit" value="Register" name="btnRegister" onclick="saveStorage('Login')" /></td>
+                                </tr>
+
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-s-12" id="footer"></div>
+        </div>

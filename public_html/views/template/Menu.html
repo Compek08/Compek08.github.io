@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<div class="header col-12 col-s-12">
+    <div class="logo">
+        <img src="../assets/img/logo.png" alt="Donald Duck">
+    </div>
+    <p>Media Pembelajaran SMASA</p>
+</div>
+
+<div id="navbar" class="col-12 col-s-12">
+    <ul>
+        <li class="col-2 col-s-2"><a class="col-12 Home" href="Home.html" onclick="saveStorage('Home')">Home</a></li>
+        <li class="col-2 col-s-2"><a class="col-12 Grades" href="javascript:void(0)" onclick="saveStorage('Grades')">Grades</a></li>
+        <li class="col-2 col-s-2"><a class="col-12 Rank" href="javascript:void(0)" onclick="saveStorage('Rank')">Rank</a></li>
+        <li class="col-2 col-s-2"><a class="col-12 Calendar" href="Calendar.html" onclick="saveStorage('Calendar')">Calendar</a></li>
+        <li class="col-2 col-s-2"><a class="col-12 Course" href="Course.html" onclick="saveStorage('Course')">Course</a></li>
+        <li class="col-2 col-s-2 dropdown right">
+            <a href="javascript:void(0)" class="dropbtn">Compek</a>
+            <div class="col-12 dropdown-content">
+                <a href="#">Profile</a>
+                <a href="#">Preferences</a>
+                <a href="#">Event</a>
+                <a href="#">Messages</a>
+                <a href="#">Private File</a>
+                <a href="index.html" onclick="clearStorage()">Logout</a>
+            </div>
+        </li>
+    </ul>
+</div>

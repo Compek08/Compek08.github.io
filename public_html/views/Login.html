@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Login MELSA</title>
+        <script src="../assets/js/jquery.min.js"></script>
+        <script>
+            $(function () {
+                $("head").load("template/Header.html");
+            });
+        </script>
+    </head>
+
+    <body>
+        <div>
+            <div class="col-12 col-s-12" id="menu"></div>
+            <div class="content">
+                <div class="col-12 col-s-12">
+                    <div class="form">
+                        <form name="login" action="Home.html">
+                            <h2 class="t-center">Login MELSA</h2>
+                            <table class="col-12">
+                                <tr>
+                                    <td>NIS</td>
+                                    <td><input type="text" name="nis" placeholder="Masukkan NIS" oninput="this.value=this.value.replace(/[^0-9]/g,'')" maxlength="8" autofocus required></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Password</td>
+                                    <td><input type="password" name="password" placeholder="Masukkan Password" required></td>
+                                </tr>
+
+                                <tr>
+                                    <td></td>
+                                    <td><input type="submit" value="Login" name="btnLogin" onclick="saveStorage('Home')" /></td>
+                                </tr>
+
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-s-12" id="footer"></div>
+        </div>

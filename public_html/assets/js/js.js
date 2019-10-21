@@ -43,7 +43,7 @@ $(document).ready(function () {
             this.classList.toggle("caret-down");
         });
     }
-    
+
     document.title = readStorage() + " MELSA";
 });
 
@@ -57,4 +57,13 @@ function readStorage() {
 
 function clearStorage() {
     sessionStorage.clear();
+}
+
+function btnEdit() {
+    if ($('#cek').is(':disabled')) {
+        $("#form :input").prop("disabled", false);
+    } else {
+        $("#form :input").prop("disabled", true);
+    }
+    $("#form :submit").prop("disabled", false);
 }

@@ -6,11 +6,83 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../assets/js/jquery.min.js"></script>
+        <script>
+            $(function () {
+                $("head").load("template/Header.html");
+            });
+        </script>
     </head>
     <body>
-        <div>TODO write content</div>
+        <div class="col-12 col-s-12" id="menu"></div>
+        <div class="content">
+            <div class="content">
+                <div class="container col-12 col-s-12">
+                    <form id="form" name="profile" action="javascript:void(0)">
+                        <h1 class="t-center">Your Profile</h1>
+                        <div class="row">
+                            <div class="col-3">
+                                <label for="nama">Nama</label>
+                            </div>
+                            <div class="col-9">
+                                <input id="cek" type="text" name="nama" placeholder="Masukkan Nama"  oninput="this.value=this.value.replace(/[^a-zA-Z' ]/g,'')" value="Compekiah Compek" autofocus disabled required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <label for="nama">NIS</label>
+                            </div>
+                            <div class="col-9">
+                                <label for="nama">1234123412341234</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <label for="alamat">Alamat</label>
+                            </div>
+                            <div class="col-9">
+                                <textarea style="resize: none" name="alamat" rows="3" placeholder="Masukkan Alamat" disabled  required>Jl. Sriwijaya VIII / 2</textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="col-9">
+                                <input type="email" name="email" placeholder="Masukkan Email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" value="compek@dr.com" disabled  required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <label for="jk">Jenis Kelamin</label>
+                            </div>
+                            <div class="col-9">
+                                <label for="jk">Laki-Laki</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <label for="pass">Password</label>
+                            </div>
+                            <div class="col-9">
+                                <input type="password" name="password" placeholder="Masukkan Password" value="1234" disabled  required>
+                            </div>
+                        </div>
+                        <div class="row hidden">
+                            <div class="col-3">
+                                <label for="vpass">Verify Password</label>
+                            </div>
+                            <div class="col-9">
+                                <input type="password" name="vpassword" placeholder="Masukkan Ulang Password" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <input type="submit" value="Edit" name="edit/save" onclick="btnEdit()" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-s-12" id="footer"></div>
     </body>
 </html>

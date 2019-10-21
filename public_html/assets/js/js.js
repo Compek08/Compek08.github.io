@@ -61,9 +61,40 @@ function clearStorage() {
 
 function btnEdit() {
     if ($('#cek').is(':disabled')) {
-        $("#form :input").prop("disabled", false);
+        var pass = $('#password').val();
+        sessionStorage.pass = pass;
+        openPass();
     } else {
-        $("#form :input").prop("disabled", true);
+        var pass = $('#password').val();
+        var vpass = $('#vpassword').val();
+        if (pass === vpass) {
+            $("#form :input").prop("disabled", true);
+            $('#hide').addClass("hidden");
+            $('#sbm').prop("value", "Edit");
+        } else {
+            alert("Wrong Password");
+        }
     }
     $("#form :submit").prop("disabled", false);
+}
+
+function openPass() {
+    $('#Pass').removeClass("hidden");
+}
+
+function closePass() {
+    $('#Pass').addClass("hidden");
+}
+
+function submitPass() {
+    var pass = $('#passw').val();
+    if (sessionStorage.pass === pass) {
+        closePass();
+        $("#form :input").prop("disabled", false);
+        $('#hide').removeClass("hidden");
+        $('#sbm').prop("value", "Save");
+    } else {
+        alert("Wrong Password");
+        closePass();
+    }
 }

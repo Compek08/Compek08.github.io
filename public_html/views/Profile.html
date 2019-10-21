@@ -17,6 +17,17 @@ and open the template in the editor.
         <div class="col-12 col-s-12" id="menu"></div>
         <div class="content">
             <div class="content">
+
+                <div id="Pass" class="overlay hidden">
+                    <span class="closebtn" onclick="closePass()" title="Cancel">x</span>
+                    <div class="overlay-content">
+                        <form action="javascript:void(0)">
+                            <input id="passw" type="password" placeholder="Password" name="pass" onfocus="this.value=''" autofocus>
+                            <input type="submit" value="Confirm" onclick="submitPass()">
+                        </form>
+                    </div>
+                </div>
+
                 <div class="container col-12 col-s-12">
                     <form id="form" name="profile" action="javascript:void(0)">
                         <h1 class="t-center">Your Profile</h1>
@@ -65,19 +76,19 @@ and open the template in the editor.
                                 <label for="pass">Password</label>
                             </div>
                             <div class="col-9">
-                                <input type="password" name="password" placeholder="Masukkan Password" value="1234" disabled  required>
+                                <input type="password" id="password" name="password" placeholder="Masukkan Password" value="1234" disabled  required>
                             </div>
                         </div>
-                        <div class="row hidden">
+                        <div id="hide" class="row hidden">
                             <div class="col-3">
                                 <label for="vpass">Verify Password</label>
                             </div>
                             <div class="col-9">
-                                <input type="password" name="vpassword" placeholder="Masukkan Ulang Password" required>
+                                <input type="password" id="vpassword" name="vpassword" placeholder="Masukkan Ulang Password" required>
                             </div>
                         </div>
                         <div class="row">
-                            <input type="submit" value="Edit" name="edit/save" onclick="btnEdit()" />
+                            <input id="sbm" type="submit" value="Edit" name="edit/save" onclick="btnEdit()" />
                         </div>
                     </form>
                 </div>

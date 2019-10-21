@@ -154,18 +154,14 @@ input[type=submit] {
   padding: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+form
+{
   transition: 0.5s;
 }
 
-/*form
-{
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-}
-
-tr td{
+/*tr td{
     padding: 10px 10px;
 }
 

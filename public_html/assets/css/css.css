@@ -156,12 +156,12 @@ input[type=submit] {
   margin-bottom: 20px;
 }
 
-form
+/*form
 {
   transition: 0.5s;
 }
 
-/*tr td{
+tr td{
     padding: 10px 10px;
 }
 

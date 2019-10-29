@@ -38,6 +38,11 @@ img.profile {
     box-shadow: 0 0 3px #30add1;
 }
 
+.image img {
+    max-width: 200px;
+    height: auto;
+}
+
 .logo-xs {
     background-image: url(../img/logo.png);
     background-repeat: no-repeat;
@@ -438,6 +443,10 @@ li.dropdown {
     text-align: center;
     font-size: 12px;
     padding: 15px;
+}
+
+.pointer {
+    cursor: pointer !important;
 }
 
 /* mobile: */

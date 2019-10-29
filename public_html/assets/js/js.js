@@ -43,6 +43,23 @@ $(document).ready(function () {
             this.classList.toggle("caret-down");
         });
     }
+    
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#prev').attr('src', e.target.result);
+                console.log(e.target.result);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $("#profilePic").change(function () {
+        readURL(this);
+    });
 
     document.title = readStorage() + " MELSA";
 });

@@ -83,19 +83,25 @@ and open the template in the editor.
                                 <h4><a href="Home.html" onclick="saveStorage('Home')">Home</a></h4>
                                 <h4><a href="Calendar.html" onclick="saveStorage('Calendar')">Calendar</a></h4>
                                 <h4>Private Files</h4>
-                                <h4>My Courses</h4>
-                                <div class="pd-l-16">
-                                    <h4><a href="Course.html" onclick="saveStorage('Course')">Mathematics</a></h4>
-                                    <h4>Physics</h4>
-                                    <h4>Biology</h4>
-                                    <h4>Chemistry</h4>
-                                    <h4>Art and Culture</h4>
-                                    <h4>Geography</h4>
-                                    <h4>Law</h4>
-                                    <h4>Indonesian Language</h4>
-                                    <h4>English</h4>
-                                    <h4>Religion</h4>
-                                </div>
+                                <ul id="tree">
+                                    <li><h4 class="caret">My Courses</h4>
+                                        <ul class="nested">
+                                            <li><div>
+                                                    <h4><a href="Course.html" onclick="saveStorage('Course')">Mathematics</a></h4>
+                                                    <h4>Physics</h4>
+                                                    <h4>Biology</h4>
+                                                    <h4>Chemistry</h4>
+                                                    <h4>Art and Culture</h4>
+                                                    <h4>Geography</h4>
+                                                    <h4>Law</h4>
+                                                    <h4>Indonesian Language</h4>
+                                                    <h4>English</h4>
+                                                    <h4>Religion</h4>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>

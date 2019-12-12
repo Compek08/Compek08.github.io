@@ -20,14 +20,14 @@ and open the template in the editor.
         <li class="col-2 col-s-2"><a class="col-12 Calendar" href="Calendar.html" onclick="saveStorage('Calendar')">Calendar</a></li>
         <li class="col-2 col-s-2"><a class="col-12 Course" href="Course.html" onclick="saveStorage('Course')">Course</a></li>
         <li class="col-2 col-s-2 dropdown right">
-            <a href="javascript:void(0)" class="dropbtn Compek">Compek</a>
+            <a id="user" href="javascript:void(0)" class="dropbtn Compek">Compek</a>
             <div class="col-12 dropdown-content">
                 <a href="Profile.html" onclick="saveStorage('Compek')">Profile</a>
                 <a href="javascript:void(0)">Preferences</a>
                 <a href="javascript:void(0)">Event</a>
                 <a href="javascript:void(0)">Messages</a>
                 <a href="javascript:void(0)">Private File</a>
-                <a href="index.html" onclick="clearStorage()">Logout</a>
+                <a href="index.html" onclick="logOut()">Logout</a>
             </div>
         </li>
     </ul>

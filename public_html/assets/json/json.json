@@ -1,0 +1,73 @@
+
+[
+    {
+        "users": 
+                {
+                    "16161010": {
+                        "Name": "Compekiah Compek",
+                        "NIS": "16161010",
+                        "Address": "Jl. Sriwijaya VIII/2",
+                        "Email": "compek@dr.com",
+                        "Sex": "Laki-Laki",
+                        "Picture": "Black.png",
+                        "Password": "12341234",
+                        "Role": "Teacher"
+                    },
+                    "16160101": {
+                        "Name": "Compu Compek",
+                        "NIS": "16160101",
+                        "Address": "Jl. Sriwijaya VIII no. 2",
+                        "Email": "compu@dr.com",
+                        "Sex": "Laki-Laki",
+                        "Picture": "Cartoon.png",
+                        "Password": "12344321",
+                        "Role": "Student"
+                    },
+                    "01011616": {
+                        "Name": "Cecil Compek",
+                        "NIS": "01011616",
+                        "Address": "Jl. Sriwijaya VIII no. 2",
+                        "Email": "cecil@dr.com",
+                        "Sex": "Perempuan",
+                        "Picture": "White.png",
+                        "Password": "12344321",
+                        "Role": "Student"
+                    },
+                    "10101616": {
+                        "Name": "Deciliah Compek",
+                        "NIS": "10101616",
+                        "Address": "Jl. Sriwijaya VIII/2",
+                        "Email": "decil@dr.com",
+                        "Sex": "Perempuan",
+                        "Picture": "Emot.png",
+                        "Password": "12341234",
+                        "Role": "Teacher"
+                    }
+                }
+    },
+
+    {
+        "Pages": {
+            "page1": [
+                {"pert": "Pertemuan 9"},
+                {"pert": "Pertemuan 10"},
+                {"pert": "Pertemuan 11"},
+                {"pert": "Pertemuan 12"},
+                {"pert": "Pertemuan 13"},
+                {"pert": "Pertemuan 14"},
+                {"pert": "Pertemuan 15"},
+                {"pert": "Pertemuan 16"}
+            ],
+            "page2": [
+                {"pert": "Pertemuan 17"},
+                {"pert": "Pertemuan 18"},
+                {"pert": "Pertemuan 19"},
+                {"pert": "Pertemuan 20"},
+                {"pert": "Pertemuan 21"},
+                {"pert": "Pertemuan 22"},
+                {"pert": "Pertemuan 23"},
+                {"pert": "Pertemuan 24"}
+            ]
+        }
+    }
+]

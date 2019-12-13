@@ -62,18 +62,16 @@ $(document).ready(function () {
                 if (processing)
                     return false;
 
-                if ($(window).scrollTop() >= $(document).height() - $(window).height() - 100) {
+                if ($(window).scrollTop() >= $(document).height() - $(window).height() - 1) {
                     delete(pageData);
                     processing = true;
                     iterasi++;
                     $.getJSON("../assets/json/json.json", function (data) {
-//                        console.log("Ajax Mlaku");
-                        console.log(iterasi);
                         pageData = data[1].Pages[hal + iterasi];
-//                        console.log(iterasi);
-//                        console.log(data[1].Pages[hal + iterasi]);
                         if (pageData) {
-                            console.log(pageData);
+                            $(pageData).each(function (n, val) {
+                                $("#pertemuan").append("<h2>" + val.pert + "</h2>");
+                            });
                         } else {
                             last = true;
                         }
@@ -101,7 +99,7 @@ $(document).ready(function () {
         if (readStorage() !== "Compek") {
             this.html(`<img src="../assets/img/Profile.png" alt="Profile" id="prev" class="pointer" title="Ubah Foto Profil"/><input type="file" id="profilePic" name="profilePic" class="hidden" accept="image/*">`);
         } else {
-            this.html(`<img src="../assets/img/Profile.png" alt="Profile" id="prev" class="pointer" title="Ubah Foto Profil"/><input type="file" id="profilePic" name="profilePic" class="hidden" disabled accept="image/*">`);
+            this.html(`<img src="../assets/img/` + user.getPicture() + `" alt="Profile" id="prev" class="pointer" title="Ubah Foto Profil"/><input type="file" id="profilePic" name="profilePic" class="hidden" disabled accept="image/*">`);
         }
 
         function readURL(input) {
@@ -244,6 +242,7 @@ function btnEdit(bool = false) {
         var pass = $('#password').val();
         var vpass = $('#vpassword').val();
         if (pass === vpass) {
+            user.updateUser();
             $("#form :input").prop("disabled", true);
             $('#hide').addClass("hidden");
             $('#sbm').prop("value", "Edit");
@@ -251,9 +250,9 @@ function btnEdit(bool = false) {
             alert("Wrong Password");
         }
     } else {
-        if ($('#cek').is(':disabled')) {
-            var pass = $('#password').val();
-            sessionStorage.pass = pass;
+        if ($('#nama').is(':disabled')) {
+//            var pass = $('#password').val();
+//            sessionStorage.pass = pass;
             openPass();
         }
     }
@@ -264,6 +263,7 @@ function openPass() {
     $('#Pass').removeClass("hidden");
     $('#Pass').addClass('showModal');
     $('#Pass').removeClass('hideModal');
+    $('#passw').focus();
 }
 
 function closePass() {
@@ -280,8 +280,9 @@ $(document).keyup(function (e) {
 
 function submitPass() {
     var pass = $('#passw').val();
-    if (sessionStorage.pass === pass) {
+    if (user.getPassword() === pass) {
         closePass();
+        $("#password").val(user.getPassword());
         $("#form :input").prop("disabled", false);
         $('#hide').removeClass("hidden");
         $('#sbm').prop("value", "Save");
@@ -353,6 +354,16 @@ function user(User) {
         return User.Password;
     }
 
+    function updateUser() {
+        User.Name = $("#nama").val();
+        User.Address = $("#alamat").val();
+        User.Email = $("#email").val();
+        User.Password = $("#password").val();
+        User.Picture = $("#profilePic").val().split("\\").pop();
+        sessionStorage.user = JSON.stringify(User);
+        console.log(sessionStorage.user);
+    }
+
     user.getRole = getRole;
     user.getName = getName;
     user.getNis = getNis;
@@ -361,6 +372,7 @@ function user(User) {
     user.getSex = getSex;
     user.getPicture = getPicture;
     user.getPassword = getPassword;
+    user.updateUser = updateUser;
 }
 
 function changeData() {
@@ -385,6 +397,12 @@ function changeData() {
     }
 
     if (page == "Profile.html") {
-
+        $("#nis").html(user.getNis());
+        $("#nama").val(user.getName());
+        $("#alamat").val(user.getAddress());
+        $("#email").val(user.getEmail());
+        $("#jk").html(user.getSex());
+        $("#password").val("********");
+        $("#profilePic").val(user.getPicture());
     }
 }

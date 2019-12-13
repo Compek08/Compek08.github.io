@@ -22,7 +22,7 @@ and open the template in the editor.
                     <span class="closebtn" onclick="closePass()" title="Cancel">x</span>
                     <div class="overlay-content">
                         <form action="javascript:void(0)">
-                            <input id="passw" type="password" placeholder="Password" name="pass" onfocus="this.value=''" autofocus>
+                            <input id="passw" type="password" placeholder="Password" name="pass" onfocus="this.value=''">
                             <input type="submit" value="Confirm" onclick="submitPass()">
                         </form>
                     </div>
@@ -36,7 +36,7 @@ and open the template in the editor.
                                 <label for="nama">Nama</label>
                             </div>
                             <div class="col-9">
-                                <input id="cek" type="text" name="nama" placeholder="Masukkan Nama"  oninput="this.value=this.value.replace(/[^a-zA-Z' ]/g,'')" value="Compekiah Compek" autofocus disabled required>
+                                <input id="nama" type="text" name="nama" placeholder="Masukkan Nama"  oninput="this.value=this.value.replace(/[^a-zA-Z' ]/g,'')" value="Compekiah Compek" autofocus disabled required>
                             </div>
                         </div>
                         <div class="row">
@@ -44,7 +44,7 @@ and open the template in the editor.
                                 <label for="nis">NIS</label>
                             </div>
                             <div class="col-9">
-                                <label for="nis">12341234</label>
+                                <label id="nis" for="nis">12341234</label>
                             </div>
                         </div>
                         <div class="row">
@@ -52,7 +52,7 @@ and open the template in the editor.
                                 <label for="alamat">Alamat</label>
                             </div>
                             <div class="col-9">
-                                <textarea style="resize: none" name="alamat" rows="3" placeholder="Masukkan Alamat" disabled  required>Jl. Sriwijaya VIII / 2</textarea>
+                                <textarea id="alamat" style="resize: none" name="alamat" rows="3" placeholder="Masukkan Alamat" disabled  required>Jl. Sriwijaya VIII / 2</textarea>
                             </div>
                         </div>
                         <div class="row">
@@ -60,7 +60,7 @@ and open the template in the editor.
                                 <label for="email">Email</label>
                             </div>
                             <div class="col-9">
-                                <input type="email" name="email" placeholder="Masukkan Email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" value="compek@dr.com" disabled  required>
+                                <input id="email" type="email" name="email" placeholder="Masukkan Email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" value="compek@dr.com" disabled  required>
                             </div>
                         </div>
                         <div class="row">
@@ -68,7 +68,7 @@ and open the template in the editor.
                                 <label for="jk">Jenis Kelamin</label>
                             </div>
                             <div class="col-9">
-                                <label for="jk">Laki-Laki</label>
+                                <label id="jk" for="jk">Laki-Laki</label>
                             </div>
                         </div>
                         <div class="row">

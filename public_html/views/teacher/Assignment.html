@@ -1,0 +1,93 @@
+<div id="Assigment">
+    <div class="row">
+        <div class="col-3">
+            <label for="start">Start</label>
+        </div>
+        <div class="col-9">
+            <div class="datetimepicker has">
+                <input class="dp col-7 col-s-7" name="startDate" type="date" id="date" required>
+                <span></span>
+                <input class="tp col-5 col-s-5" name="startTime" type="time" id="time" required>
+                <input type="hidden" name="start" value="">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <label for="end">End</label>
+        </div>
+        <div class="col-9">
+            <div class="datetimepicker">
+                <input class="dp col-7 col-s-7" name="endDate" type="date" id="date" required>
+                <span></span>
+                <input class="tp col-5 col-s-5" name="endTime" type="time" id="time" required>
+                <input type="hidden" name="end" value="">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <label for="start">Description</label>
+        </div>
+        <div class="col-9">
+            <textarea name="description" rows="3" placeholder="Set Deskripsi" required></textarea>
+        </div>
+    </div>
+    <div id="soal"></div>
+</div>
+<script>
+    $(document).ready(function () {
+        date = new Date();
+        tgl = date.getFullYear() + '-' + ('0' + date.getMonth() + 2).slice(-2) + '-' + ('0' + date.getDate()).slice(-2);
+        jam = ('0' + (date.getHours() + 1)).slice(-2) + ':' + ('0' + date.getMinutes()).slice(-2);
+//        console.log(tgl);
+//        console.log(jam);
+        val = ((tgl + '-' + jam).replace(/:/g, '-')).split('-');
+//        console.log(val);
+        val = new Date(val[0], val[1] - 1, val[2], val[3], val[4]);
+        $('.tp').val(jam);
+        $('.dp').val(tgl);
+        $('input[name=start]').val(val);
+        $('input[name=end]').val(val);
+
+        $('.datetimepicker').each(function (n, dt) {
+            $(this).find('.tp').change(function () {
+                valTgl = $(dt).find('.dp').val();
+                valJam = $(dt).find('.tp').val();
+                pilih = ((valTgl + '-' + valJam).replace(/:/g, '-')).split('-');
+//                console.log(pilih);
+                pilih = new Date(pilih[0], pilih[1] - 1, pilih[2], pilih[3], pilih[4]);
+//                console.log(pilih);
+                date = new Date();
+                tgl = date.getFullYear() + '-' + ('0' + date.getMonth() + 2).slice(-2) + '-' + ('0' + date.getDate()).slice(-2);
+                jam = ('0' + (date.getHours() + 1)).slice(-2) + ':' + ('0' + date.getMinutes()).slice(-2);
+                btBawah = ((tgl + '-' + jam).replace(/:/g, '-')).split('-');
+//                console.log(btBawah);
+                btBawah = new Date(btBawah[0], btBawah[1] - 1, btBawah[2], (btBawah[3]), btBawah[4]);
+//                console.log(btBawah);
+
+//                console.log($(dt).hasClass('has'));
+                if ($(dt).hasClass('has')) {
+                    if (pilih < btBawah) {
+                        alert("Tanggal Melewati Batas Sekarang!");
+                        $(dt).find('.dp').val(tgl);
+                        $(dt).find('.tp').val(jam);
+                    } else {
+                        btBawah2 = pilih;
+                        Tgl = $(dt).find('.dp').val();
+                        Jam = $(dt).find('.tp').val();
+                        $('input[name=start]').val(pilih);
+                    }
+                } else {
+                    if (pilih < btBawah2) {
+                        alert("Tanggal Melewati Batas Start!");
+                        $(dt).find('.dp').val(Tgl);
+                        $(dt).find('.tp').val(Jam);
+                    } else {
+                        $('input[name=end]').val(pilih);
+                    }
+                }
+            });
+        });
+    });
+</script>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <script src="../assets/js/jquery.min.js"></script>
+        <script>
+            $(function () {
+                $("head").load("template/Header.html");
+            });
+        </script>
+    </head>
+
+    <body>
+        <div>
+            <div class="col-12 col-s-12" id="menu"></div>
+            <div class="content">
+                <div class="content">
+                    <div class="col-12">
+                        <h1 class="t-center">Grades</h1>
+                    </div>
+                    <div class="content mg-lr-3">
+                        <div class="container col-12 col-s-12">
+                            <form name="Login" action="javascript:void(0)">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <label for="nis">Year</label>
+                                    </div>
+                                    <div class="col-9">
+                                        <select required>
+                                            <option>2010</option>
+                                            <option>2011</option>
+                                            <option>2012</option>
+                                            <option>2013</option>
+                                            <option>2014</option>
+                                            <option>2015</option>
+                                            <option>2016</option>
+                                            <option>2017</option>
+                                            <option>2018</option>
+                                            <option>2019</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <label for="pass">Semester</label>
+                                    </div>
+                                    <div class="col-9">
+                                        <select required>
+                                            <option>1</option>
+                                            <option>2</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <input id="grade" type="submit" value="Confirm" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="content mg-lr-3">
+                        <div class="border-thin-blue col-12 col-s-12">
+                            <div id="grades" class="content bd-bt"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-s-12" id="footer"></div>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<div id="Attedamce">
+    <div class="row">
+        <div class="col-3">
+            <label for="start">Start</label>
+        </div>
+        <div class="col-9">
+            <select id="start" name="startT" required></select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <label for="end">End</label>
+        </div>
+        <div class="col-9">
+            <select id="end" name="endT" required></select>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        for (var i = 0; i < 21; i++) {
+            $('#start').append('<option value="' + ('0' + i).slice(-2) + '">' + ('0' + i).slice(-2) + '</option>');
+            $('#end').append('<option value="' + ('0' + i).slice(-2) + '">' + ('0' + i).slice(-2) + '</option>');
+        }
+
+        $('#end').change(function () {
+            start = $('#start').val();
+            end = $('#end').val();
+            if ((start - 0) > (end - 0)) {
+                alert('Start Harus Kurang Dari End');
+                $('#end').val(start);
+            }
+        });
+    });
+</script>

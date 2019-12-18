@@ -10,7 +10,14 @@
                         "Sex": "Laki-Laki",
                         "Picture": "Black.png",
                         "Password": "12341234",
-                        "Role": "Teacher"
+                        "Role": "Teacher",
+                        "Grade": {
+                            "Teaching": "95",
+                            "Punctuality": "80",
+                            "Responding":"78",
+                            "Sum":"243",
+                            "Mean":"81"
+                        }
                     },
                     "16160101": {
                         "Name": "Compu Compek",
@@ -20,7 +27,21 @@
                         "Sex": "Laki-Laki",
                         "Picture": "Cartoon.png",
                         "Password": "12344321",
-                        "Role": "Student"
+                        "Role": "Student",
+                        "Grade": {
+                            "Mathematics": "95",
+                            "Physics": "90",
+                            "Biology":"88",
+                            "Chemistry":"90",
+                            "Art and Culture":"80",
+                            "Geography":"78",
+                            "Law":"75",
+                            "Indonesian Language":"80",
+                            "English":"80",
+                            "Religion":"88",
+                            "Sum":"844",
+                            "Mean":"84.4"
+                        }
                     },
                     "01011616": {
                         "Name": "Cecil Compek",
@@ -30,7 +51,21 @@
                         "Sex": "Perempuan",
                         "Picture": "White.png",
                         "Password": "12344321",
-                        "Role": "Student"
+                        "Role": "Student",
+                        "Grade": {
+                            "Mathematics": "95",
+                            "Physics": "90",
+                            "Biology":"85",
+                            "Chemistry":"90",
+                            "Art and Culture":"80",
+                            "Geography":"75",
+                            "Law":"75",
+                            "Indonesian Language":"80",
+                            "English":"80",
+                            "Religion":"85",
+                            "Sum":"830",
+                            "Mean":"83"
+                        }
                     },
                     "10101616": {
                         "Name": "Deciliah Compek",
@@ -40,7 +75,14 @@
                         "Sex": "Perempuan",
                         "Picture": "Emot.png",
                         "Password": "12341234",
-                        "Role": "Teacher"
+                        "Role": "Teacher",
+                        "Grade": {
+                            "Teaching": "85",
+                            "Punctuality": "90",
+                            "Responding":"75",
+                            "Sum":"250",
+                            "Mean":"83.3"
+                        }
                     }
                 }
     },
@@ -48,24 +90,56 @@
     {
         "Pages": {
             "page1": [
-                {"pert": "Pertemuan 9"},
-                {"pert": "Pertemuan 10"},
-                {"pert": "Pertemuan 11"},
-                {"pert": "Pertemuan 12"},
-                {"pert": "Pertemuan 13"},
-                {"pert": "Pertemuan 14"},
-                {"pert": "Pertemuan 15"},
-                {"pert": "Pertemuan 16"}
+                {
+                    "pert": "Pertemuan 9"
+                },
+                {
+                    "pert": "Pertemuan 10"
+                },
+                {
+                    "pert": "Pertemuan 11"
+                },
+                {
+                    "pert": "Pertemuan 12"
+                },
+                {
+                    "pert": "Pertemuan 13"
+                },
+                {
+                    "pert": "Pertemuan 14"
+                },
+                {
+                    "pert": "Pertemuan 15"
+                },
+                {
+                    "pert": "Pertemuan 16"
+                }
             ],
             "page2": [
-                {"pert": "Pertemuan 17"},
-                {"pert": "Pertemuan 18"},
-                {"pert": "Pertemuan 19"},
-                {"pert": "Pertemuan 20"},
-                {"pert": "Pertemuan 21"},
-                {"pert": "Pertemuan 22"},
-                {"pert": "Pertemuan 23"},
-                {"pert": "Pertemuan 24"}
+                {
+                    "pert": "Pertemuan 17"
+                },
+                {
+                    "pert": "Pertemuan 18"
+                },
+                {
+                    "pert": "Pertemuan 19"
+                },
+                {
+                    "pert": "Pertemuan 20"
+                },
+                {
+                    "pert": "Pertemuan 21"
+                },
+                {
+                    "pert": "Pertemuan 22"
+                },
+                {
+                    "pert": "Pertemuan 23"
+                },
+                {
+                    "pert": "Pertemuan 24"
+                }
             ]
         }
     }
